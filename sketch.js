@@ -18,7 +18,7 @@ function setup() {
   sketch = createCanvas(windowWidth-550,500);
   sketch.parent("p5");
 
-  slider = createSlider(1, 50, 5);
+  slider = createSlider(1, 50, 3);
   slider.parent("slid");
 
   s1 = createSlider(1, 100, 2);
