@@ -13,17 +13,33 @@ let slider, s1, s2, s3, sc;
 
 function setup() {
 
-  createCanvas(windowWidth, 500);
+
+
+  sketch = createCanvas(windowWidth-550,500);
+  sketch.parent("p5");
+
   slider = createSlider(1, 50, 5);
+  slider.parent("slid");
+
   s1 = createSlider(1, 100, 2);
-  s2 = createSlider(1, 8, 4);
+  s1.parent ("s1");
+
+  s2 = createSlider(1, 12, 4);
+  s2.parent ("s2");
+
   s3 = createSlider(1, 2, 1);
+  s3.parent ("s3");
+
   sc = createSlider(1, 2, 1);
+  sc.parent ("sc");
+
+ 
 }
 
 function draw() {
-  background(240);
-  translate(300, 200);
+  background(255);
+  translate(200, 250);
+  
 
   let x = 0;
   let y = 0;
@@ -68,8 +84,8 @@ function draw() {
   }
   wave.unshift(y);
 
-  translate(500, 0);
-  line(x - 500, y, 0, wave[0]);
+  translate(300, 0);
+  line(x - 300, y, 0, wave[0]);
   beginShape();
   noFill();
   for (let i = 0; i < wave.length; i++) {
