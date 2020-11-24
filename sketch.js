@@ -18,19 +18,19 @@ function setup() {
   sketch = createCanvas(windowWidth-550,500);
   sketch.parent("p5");
 
-  slider = createSlider(1, 50, 3);
+  slider = createSlider(1, 50, 10);
   slider.parent("slid");
 
-  s1 = createSlider(1, 100, 2);
+  s1 = createSlider(1, 15, 2);
   s1.parent ("s1");
 
-  s2 = createSlider(1, 12, 4);
+  s2 = createSlider(1, 12, 12);
   s2.parent ("s2");
 
-  s3 = createSlider(1, 2, 1);
+  s3 = createSlider(1, 2, 2);
   s3.parent ("s3");
 
-  sc = createSlider(1, 2, 1);
+  sc = createSlider(1, 2, 2);
   sc.parent ("sc");
 
  
@@ -40,6 +40,12 @@ function draw() {
   background(255);
   translate(200, 250);
   
+  textSize(36);
+  text(slider.value(), 0, 200);
+  text(s1.value(), 100, 200);
+  text(s2.value(), 200, 200);
+  text(s3.value(), 300, 200);
+  text(sc.value(), 400, 200);
   
 
   let x = 0;
