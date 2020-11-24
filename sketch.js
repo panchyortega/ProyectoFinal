@@ -102,7 +102,7 @@ function draw() {
 
   time += 0.02;
 
-  if (wave.length > 1500) {
+  if (wave.length > 500) {
     wave.pop();
   }
 }
